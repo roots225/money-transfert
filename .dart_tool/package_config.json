@@ -32,8 +32,20 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "crypto",
+      "rootUri": "file:///Users/macpro/development/flutter/.pub-cache/hosted/pub.dartlang.org/crypto-3.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
       "name": "cupertino_icons",
       "rootUri": "file:///Users/macpro/development/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-1.0.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "equatable",
+      "rootUri": "file:///Users/macpro/development/flutter/.pub-cache/hosted/pub.dartlang.org/equatable-2.0.5",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -44,10 +56,28 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "ffi",
+      "rootUri": "file:///Users/macpro/development/flutter/.pub-cache/hosted/pub.dartlang.org/ffi-2.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "file",
+      "rootUri": "file:///Users/macpro/development/flutter/.pub-cache/hosted/pub.dartlang.org/file-6.1.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter",
       "rootUri": "file:///Users/macpro/development/flutter/packages/flutter",
       "packageUri": "lib/",
       "languageVersion": "2.17"
+    },
+    {
+      "name": "flutter_feather_icons",
+      "rootUri": "file:///Users/macpro/development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_feather_icons-2.0.0+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "flutter_lints",
@@ -60,6 +90,30 @@
       "rootUri": "file:///Users/macpro/development/flutter/packages/flutter_test",
       "packageUri": "lib/",
       "languageVersion": "2.17"
+    },
+    {
+      "name": "google_fonts",
+      "rootUri": "file:///Users/macpro/development/flutter/.pub-cache/hosted/pub.dartlang.org/google_fonts-4.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "http",
+      "rootUri": "file:///Users/macpro/development/flutter/.pub-cache/hosted/pub.dartlang.org/http-0.13.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "http_parser",
+      "rootUri": "file:///Users/macpro/development/flutter/.pub-cache/hosted/pub.dartlang.org/http_parser-4.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "intl",
+      "rootUri": "file:///Users/macpro/development/flutter/.pub-cache/hosted/pub.dartlang.org/intl-0.18.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "lints",
@@ -92,6 +146,60 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "path_provider",
+      "rootUri": "file:///Users/macpro/development/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-2.0.12",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "path_provider_android",
+      "rootUri": "file:///Users/macpro/development/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_android-2.0.22",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "path_provider_foundation",
+      "rootUri": "file:///Users/macpro/development/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_foundation-2.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "path_provider_linux",
+      "rootUri": "file:///Users/macpro/development/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-2.1.7",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "path_provider_platform_interface",
+      "rootUri": "file:///Users/macpro/development/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_platform_interface-2.0.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "path_provider_windows",
+      "rootUri": "file:///Users/macpro/development/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_windows-2.1.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "platform",
+      "rootUri": "file:///Users/macpro/development/flutter/.pub-cache/hosted/pub.dartlang.org/platform-3.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "plugin_platform_interface",
+      "rootUri": "file:///Users/macpro/development/flutter/.pub-cache/hosted/pub.dartlang.org/plugin_platform_interface-2.1.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "process",
+      "rootUri": "file:///Users/macpro/development/flutter/.pub-cache/hosted/pub.dartlang.org/process-4.2.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
       "name": "sky_engine",
       "rootUri": "file:///Users/macpro/development/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
@@ -122,6 +230,18 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "syncfusion_flutter_charts",
+      "rootUri": "file:///Users/macpro/development/flutter/.pub-cache/hosted/pub.dartlang.org/syncfusion_flutter_charts-20.4.49",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "syncfusion_flutter_core",
+      "rootUri": "file:///Users/macpro/development/flutter/.pub-cache/hosted/pub.dartlang.org/syncfusion_flutter_core-20.4.49",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
       "name": "term_glyph",
       "rootUri": "file:///Users/macpro/development/flutter/.pub-cache/hosted/pub.dartlang.org/term_glyph-1.2.1",
       "packageUri": "lib/",
@@ -134,10 +254,28 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "typed_data",
+      "rootUri": "file:///Users/macpro/development/flutter/.pub-cache/hosted/pub.dartlang.org/typed_data-1.3.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "vector_math",
       "rootUri": "file:///Users/macpro/development/flutter/.pub-cache/hosted/pub.dartlang.org/vector_math-2.1.2",
       "packageUri": "lib/",
       "languageVersion": "2.14"
+    },
+    {
+      "name": "win32",
+      "rootUri": "file:///Users/macpro/development/flutter/.pub-cache/hosted/pub.dartlang.org/win32-3.1.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "xdg_directories",
+      "rootUri": "file:///Users/macpro/development/flutter/.pub-cache/hosted/pub.dartlang.org/xdg_directories-0.2.0+3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "app",
@@ -146,7 +284,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2023-02-02T14:29:09.084457Z",
+  "generated": "2023-02-07T11:40:53.489201Z",
   "generator": "pub",
   "generatorVersion": "2.18.5"
 }
