@@ -111,16 +111,16 @@ class _SyntheseHomePageState extends State<SyntheseHomePage> {
                               elevation: 6,
                               constraints: BoxConstraints(
                                 maxHeight:
-                                    MediaQuery.of(context).size.height * 0.65,
+                                    MediaQuery.of(context).size.height * 0.55,
                               ),
                               builder: (context) {
-                                return SendPage();
+                                return const SendPage();
                               });
                         },
                       ),
                       ActionButton(
                         icon: FeatherIcons.arrowDownLeft,
-                        label: "",
+                        label: "Encaisser",
                         onPressed: () {},
                       ),
                       ActionButton(
@@ -130,12 +130,12 @@ class _SyntheseHomePageState extends State<SyntheseHomePage> {
                       ),
                       ActionButton(
                         icon: FeatherIcons.plus,
-                        label: "Ajouter",
+                        label: "Services",
                         onPressed: () {},
                       ),
                     ],
                   ),
-                  // const SizedBox(height: 15),
+                  const SizedBox(height: 15),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [

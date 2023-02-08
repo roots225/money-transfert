@@ -14,7 +14,7 @@ class HomeTotalAmountViewer extends StatelessWidget {
             'FCFA 500 000',
             style: TextStyle(
               color: AppColors.white,
-              fontSize: 28,
+              fontSize: 30,
               fontWeight: FontWeight.w800,
             ),
           ),
