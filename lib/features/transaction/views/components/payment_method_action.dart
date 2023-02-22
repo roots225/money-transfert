@@ -1,27 +1,38 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 
 import '../../../../app_colors.dart';
 
-class PaymentMethodAction extends StatefulWidget {
+class PaymentMethodAction extends StatelessWidget {
   final String name;
-  const PaymentMethodAction({super.key, required this.name});
-
-  @override
-  State<PaymentMethodAction> createState() => _PaymentMethodActionState();
-}
-
-class _PaymentMethodActionState extends State<PaymentMethodAction> {
-  String get name => widget.name;
+  final String? description;
+  final Function onPressed;
+  final Widget? icon;
+  const PaymentMethodAction(
+      {super.key,
+      required this.name,
+      this.description,
+      required this.onPressed,
+      this.icon});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: AppColors.black,
-      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 30),
-      child: Center(
-          child: Text(name, style: const TextStyle(color: AppColors.white))),
+      decoration: BoxDecoration(
+        border: Border(
+            bottom:
+                BorderSide(width: 1, color: AppColors.white.withAlpha(100))),
+      ),
+      child: ListTile(
+        onTap: () {
+          onPressed();
+        },
+        leading: SizedBox(width: 70, height: 70, child: icon),
+        title: Text(name, style: const TextStyle(color: AppColors.white)),
+        subtitle: Text(description ?? "Envoyer de l'argent",
+            style: const TextStyle(color: AppColors.white)),
+        trailing: const Icon(FeatherIcons.arrowRight),
+      ),
     );
   }
 }

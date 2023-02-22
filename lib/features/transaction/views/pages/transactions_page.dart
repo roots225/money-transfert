@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
 import '../../../../app_colors.dart';
-import '../../../../core/components/yemi_app_bar.dart';
+import '../../../../common/components/yemi_app_bar.dart';
 import '../../data/models/transaction_model.dart';
-import '../../../../core/components/section_title.dart';
+import '../../../../common/components/section_title.dart';
 import '../components/transaction_card.dart';
 
 class TransactionPage extends StatefulWidget {
@@ -41,42 +41,44 @@ class _TransactionPageState extends State<TransactionPage> {
       backgroundColor: AppColors.black,
       appBar: YemiAppBar(
         title: 'Transactions',
+        titleColor: AppColors.white,
+        backgroundColor: AppColors.black.withOpacity(0.6),
       ),
-      body: Container(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SizedBox(
-              height: 200,
-              child: SfCartesianChart(
-                primaryXAxis: CategoryAxis(),
-                // Chart title
-                // title: ChartTitle(text: 'Half yearly sales analysis'),
-                // Enable legend
-                // legend: Legend(isVisible: true),
-                // Enable tooltip
-                tooltipBehavior: TooltipBehavior(enable: true),
-                series: <ChartSeries<_SalesData, String>>[
-                  LineSeries<_SalesData, String>(
-                      dataSource: data,
-                      xValueMapper: (_SalesData sales, _) => sales.year,
-                      yValueMapper: (_SalesData sales, _) => sales.sales,
-                      name: 'Sales',
-                      // Enable data label
-                      dataLabelSettings: DataLabelSettings(isVisible: true))
-                ],
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const SizedBox(height: 20),
+          SizedBox(
+            height: 200,
+            child: SfCartesianChart(
+              primaryXAxis: CategoryAxis(),
+              // Chart title
+              // title: ChartTitle(text: 'Half yearly sales analysis'),
+              // Enable legend
+              // legend: Legend(isVisible: true),
+              // Enable tooltip
+              tooltipBehavior: TooltipBehavior(enable: true),
+              series: <ChartSeries<_SalesData, String>>[
+                LineSeries<_SalesData, String>(
+                    dataSource: data,
+                    xValueMapper: (_SalesData sales, _) => sales.year,
+                    yValueMapper: (_SalesData sales, _) => sales.sales,
+                    name: 'Sales',
+                    // Enable data label
+                    dataLabelSettings: DataLabelSettings(isVisible: true))
+              ],
+            ),
+          ),
+          const SizedBox(height: 10),
+          const SectionTitle(label: 'Transactions'),
+          Expanded(
+            child: SingleChildScrollView(
+              child: Column(
+                children: [...transactionWidgets],
               ),
             ),
-            const SectionTitle(label: 'Transactions'),
-            Expanded(
-              child: SingleChildScrollView(
-                child: Column(
-                  children: [...transactionWidgets],
-                ),
-              ),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

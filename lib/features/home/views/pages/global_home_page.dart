@@ -1,3 +1,4 @@
+import 'package:app/features/profile/views/pages/profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 
@@ -25,14 +26,24 @@ class _GlobalHomePageState extends State<GlobalHomePage>
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.transparent,
-      body: TabBarView(
-        controller: tabController,
-        children: const [
-          SyntheseHomePage(),
-          SyntheseHomePage(),
-          SyntheseHomePage(),
-          SyntheseHomePage(),
-        ],
+      body: Container(
+        height: MediaQuery.of(context).size.height,
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage('assets/images/phone-gf8bb85b69_1280.jpg'),
+              fit: BoxFit.fitHeight,
+              opacity: 0.18,
+              colorFilter: ColorFilter.mode(Colors.black, BlendMode.overlay)),
+        ),
+        child: TabBarView(
+          controller: tabController,
+          children: const [
+            SyntheseHomePage(),
+            ProfilePage(),
+            SyntheseHomePage(),
+            SyntheseHomePage(),
+          ],
+        ),
       ),
       bottomNavigationBar: Material(
         color: AppColors.black,

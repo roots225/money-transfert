@@ -15,14 +15,14 @@ class HomeTotalAmountViewer extends StatelessWidget {
             style: TextStyle(
               color: AppColors.white,
               fontSize: 30,
-              fontWeight: FontWeight.w800,
+              fontWeight: FontWeight.w900,
             ),
           ),
           Text(
             'Total de vos transactions',
             style: TextStyle(
               color: AppColors.white.withAlpha(120),
-              fontSize: 11,
+              fontSize: 12,
             ),
           ),
         ],

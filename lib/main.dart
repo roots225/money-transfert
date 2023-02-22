@@ -20,6 +20,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: AppColors.black,
         fontFamily: GoogleFonts.lato().fontFamily,
+        textTheme: TextTheme(
+          bodyText1: TextStyle(fontSize: 14.0),
+          bodyText2: TextStyle(fontSize: 12.0),
+        ),
+        scaffoldBackgroundColor: AppColors.black.withOpacity(0.7),
+        colorScheme: AppColors.darkScheme,
       ),
       home: const GlobalHomePage(),
       routes: {'/transactions': (context) => const TransactionPage()},

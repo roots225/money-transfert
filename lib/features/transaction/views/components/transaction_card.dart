@@ -17,10 +17,11 @@ class TransactionCard extends StatelessWidget {
         transaction.direction == "credit" ? AppColors.success : AppColors.error;
     return Card(
       color: const Color(0xFF3f3e45),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       child: ListTile(
         contentPadding: const EdgeInsets.symmetric(vertical: 0, horizontal: 10),
         minVerticalPadding: 0,
+        horizontalTitleGap: 0,
         onTap: () {
           /// TODO: Go to detail page
         },
