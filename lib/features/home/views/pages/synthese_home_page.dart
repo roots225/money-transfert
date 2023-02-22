@@ -56,16 +56,16 @@ class _SyntheseHomePageState extends State<SyntheseHomePage> {
                             'ROOTS225',
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 12,
+                              fontSize: 11,
                               fontWeight: FontWeight.w400,
                             ),
                           ),
                           Text(
-                            'Money Transfert',
+                            'Yemi',
                             style: TextStyle(
                               color: Colors.white.withOpacity(0.7),
-                              fontSize: 20,
-                              fontWeight: FontWeight.w700,
+                              fontSize: 24,
+                              fontWeight: FontWeight.w800,
                             ),
                           )
                         ],
@@ -83,9 +83,9 @@ class _SyntheseHomePageState extends State<SyntheseHomePage> {
                     )
                   ],
                 ),
-                const SizedBox(height: 30),
+                const SizedBox(height: 40),
                 const HomeTotalAmountViewer(),
-                const SizedBox(height: 25),
+                const SizedBox(height: 40),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -94,7 +94,7 @@ class _SyntheseHomePageState extends State<SyntheseHomePage> {
                       icon: FeatherIcons.arrowUpRight,
                       label: "Envoyer",
                       onPressed: () {
-                        pushPage(context, const SendPage());
+                        pushNavigation(context, const SendPage());
                       },
                     ),
                     ActionButton(
@@ -114,14 +114,14 @@ class _SyntheseHomePageState extends State<SyntheseHomePage> {
                     ),
                   ],
                 ),
-                const SizedBox(height: 15),
+                const SizedBox(height: 30),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     const SectionTitle(label: 'Transactions'),
                     TextButton(
                       onPressed: () {
-                        pushPage(context, const TransactionPage());
+                        pushNavigation(context, const TransactionPage());
                       },
                       child: const Text(
                         'Tout voir',

@@ -32,7 +32,7 @@ class _SendPageState extends State<SendPage> {
               icon: Image.asset('assets/images/om.png'),
               name: 'Orange Money',
               onPressed: () {
-                pushPage(context, const SendContactPage());
+                pushNavigation(context, const SendContactPage());
               },
             ),
             PaymentMethodAction(

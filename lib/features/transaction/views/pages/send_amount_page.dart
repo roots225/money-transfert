@@ -115,7 +115,7 @@ class _SendAmountPageState extends State<SendAmountPage> {
                   const SizedBox(height: 20),
                   ElevatedButton(
                     onPressed: () {
-                      pushReplacementAll(
+                      pushAndRemoveAll(
                         context,
                         const TransactionSucceedPage(
                           transaction: TransactionModel(

@@ -28,7 +28,7 @@ class _SendContactPageState extends State<SendContactPage> {
         .map((item) => ContactItem(
               contact: item,
               onPressed: (c) {
-                pushReplacementPage(context, SendAmountPage());
+                pushReplacement(context, SendAmountPage());
               },
             ))
         .toList();
@@ -57,7 +57,7 @@ class _SendContactPageState extends State<SendContactPage> {
                       EnterNumberDialog(
                         onChanged: (v) {},
                         onConfirmed: (v) {
-                          pushReplacementPage(context, SendAmountPage());
+                          pushReplacement(context, SendAmountPage());
                         },
                       ), onCancel: () {
                     popNavigation(context);

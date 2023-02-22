@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 
 import '../../../../app_colors.dart';
+import '../../../../profile/presentations/pages/profile_screen.dart';
 import 'synthese_home_page.dart';
 
 class GlobalHomePage extends StatefulWidget {
@@ -39,7 +40,7 @@ class _GlobalHomePageState extends State<GlobalHomePage>
           controller: tabController,
           children: const [
             SyntheseHomePage(),
-            ProfilePage(),
+            ProfileScreen(),
             SyntheseHomePage(),
             SyntheseHomePage(),
           ],
