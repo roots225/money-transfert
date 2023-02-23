@@ -11,6 +11,9 @@ import 'package:flutx/flutx.dart';
 import '../../../../common/theme/app_theme.dart';
 import '../../../../common/utils/app_colors.dart';
 import 'account_validation_page.dart';
+import 'add_bank_wallet_page.dart';
+import 'add_mobile_wallet_page.dart';
+import 'add_visa_wallet_page.dart';
 
 class AddWalletPage extends StatefulWidget {
   const AddWalletPage({Key? key}) : super(key: key);
@@ -20,8 +23,10 @@ class AddWalletPage extends StatefulWidget {
 }
 
 class _AddWalletPageState extends State<AddWalletPage> {
+  late WalletModel wallet;
   late ThemeData theme;
   late CustomTheme customTheme;
+  late Widget nextPage;
 
   late TextEditingController nameController = TextEditingController();
   late TextEditingController emailController = TextEditingController();
@@ -32,6 +37,14 @@ class _AddWalletPageState extends State<AddWalletPage> {
     super.initState();
     theme = AppTheme.theme;
     customTheme = AppTheme.customTheme;
+
+    wallet = WalletModel(
+      name: 'Mobile monnaie',
+      type: WalletType.mobile,
+      code: 'mobile',
+      userData: UserWalletData(),
+    );
+    nextPage = AddMobileWalletPage(wallet: wallet);
   }
 
   @override
@@ -58,6 +71,7 @@ class _AddWalletPageState extends State<AddWalletPage> {
                   margin: const EdgeInsets.only(top: 24),
                   child: FormBuilderDropdown(
                     name: 'walletType',
+                    initialValue: wallet.code,
                     dropdownColor: AppColors.black,
                     items: const [
                       DropdownMenuItem(
@@ -76,7 +90,29 @@ class _AddWalletPageState extends State<AddWalletPage> {
                         size: 24,
                       ),
                     ),
-                    onChanged: (v) {},
+                    onChanged: (v) {
+                      setState(() {
+                        wallet.code = v ?? '';
+                        switch (v) {
+                          case 'mobile':
+                            nextPage = AddMobileWalletPage(wallet: wallet);
+                            wallet.type = WalletType.mobile;
+                            wallet.name = 'Mobile monnaie';
+                            break;
+                          case 'visa':
+                            nextPage = AddVisaWalletPage(wallet: wallet);
+                            wallet.type = WalletType.visa;
+                            wallet.name = 'Carte Visa';
+                            break;
+                          case 'bank':
+                            nextPage = AddBankWalletPage(wallet: wallet);
+                            wallet.type = WalletType.bank;
+                            wallet.name = 'Banque';
+                            break;
+                          default:
+                        }
+                      });
+                    },
                   ),
                 ),
                 FxSpacing.height(24),
@@ -84,12 +120,7 @@ class _AddWalletPageState extends State<AddWalletPage> {
                   elevation: 0,
                   borderRadiusAll: 8,
                   onPressed: () {
-                    final wallet = WalletModel(
-                        name: 'Mobile monnaie',
-                        type: WalletType.mobile,
-                        code: 'mobile');
-                    pushNavigation(
-                        context, AccountValidationPage(wallet: wallet));
+                    pushNavigation(context, nextPage);
                   },
                   backgroundColor: customTheme.homemadePrimary,
                   child: FxText.titleMedium(
